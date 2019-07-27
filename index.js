@@ -1,7 +1,7 @@
 const title = document.querySelector("#title");
 
-function handleResize() {
-  console.log("I have been resized");
+function handleClick() {
+  title.style.color = "blue";
 }
 
-window.addEventListener("resize", handleResize);
+title.addEventListener("click", handleClick);
