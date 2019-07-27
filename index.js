@@ -1,31 +1,37 @@
-const something = "Something";
+const deviInfo = {
+  name: "Devinan",
+  age: 20,
+  gender: "Male"
+};
 
-const dayOfWeek = [
-  "Mon",
-  "Tue",
-  "Wed",
-  "Thu",
-  "Fri",
-  "Sat",
-  "Sun",
-  54,
-  true,
-  "stuff",
-  "lalala",
-  something
-];
-console.log(dayOfWeek[2]);
+console.log(deviInfo.gender);
+
+deviInfo.gender = "Female";
+
+console.log(deviInfo.gender);
 
 /*
-[데이터 organize. 정렬하는 법]
-1. Array: 리스트라 생각해. (eg 월화수목금토일) 
-Array 월-일을 한줄씩 const로 정해줄 필요 없이 array 사용 
-(eg const daysOfWeek = [])
-[] 안에는: 텍스트, true/false, numbers, floats 사용가능
-Array []안에 숫자 써주면 해당하는 순서의 값을 출력해줘
-BUT 컴퓨터는 0부터 세. 사람이랑 달라
+Object는 value에 이름을 줄 수 있어
+리스트 만들땐 Array 사용해
+하지만 예를들어, Array로 내 개인정보를 저장하려면 (이름, 나이, 성별 등)
+내가 원하는 방식으로 정보가 저장되지 않아
+**Object는 각 데이터에 label이 가능해
 
-2. Object (다음편에서)
+예를들면,
 
-camelCase: 변수명 소문자로 시작. 중간에 space가 필요하면 대문자로 적어줘
+const nicoInfo = {
+  name: "Nico",
+  age: 33,
+  gender: "Male",
+}
+Console.log(nicoInfo.gender);
+추후 label 값 재지정할 수 있어
+nicoInfo.gender = "Female"
+
+***Array 안에 object 넣을 수 있어
+favFood: [{name:"kimchi", fatty:false}, {name: "cheese", fatty:true}]
+
+[그래머 기억할 것들]
+',' 콤마 빼먹지 말 것
+" " 쿼테이션 까먹지 말고 닫아
 */
