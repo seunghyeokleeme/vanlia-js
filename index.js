@@ -1,12 +1,9 @@
-function sayHello(name, age) {
-  console.log(`Hello! ${name} you have ${age} years of age.`);
-}
+const calculator = {
+  plus: function(a, b) {
+    return a + b;
+  }
+};
 
-const greetDevinan = sayHello("Devinan", 20);
-
-console.log(greetDevinan);
-
-/*
-greetDevinan 은 sayHello의 실행된 결과값이다.(반환)
-but.sayHello는 반환을 안해서 정의 가되지않는다.
-*/
+//console.log(greetDevinan);
+const plus = calculator.plus(5, 5);
+console.log(plus);
