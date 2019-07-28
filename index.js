@@ -1,44 +1,21 @@
 const title = document.querySelector("#title");
 
-const BASE_COLOR = "rgb(52, 73, 94)";
-const OTHER_COLOR = "#7f8c8d";
+const CLICKED_CLASS = "clicked";
 
 function handleClick() {
-  const currentColor = title.style.color;
-  if (currentColor === BASE_COLOR) {
-    title.style.color = OTHER_COLOR;
+  const currentClass = title.className;
+  if (currentClass !== CLICKED_CLASS) {
+    title.className = CLICKED_CLASS;
   } else {
-    title.style.color = BASE_COLOR;
+    title.className = "";
   }
 }
-
-function init() {
-  title.style.color = BASE_COLOR;
-  title.addEventListener("click", handleClick);
-}
-
-init();
-
-function handleOffline() {
-  console.log("Bye bye");
-}
-
-function handleOnline() {
-  console.log("Welcome back");
-}
-
-window.addEventListener("offline", handleOffline);
-window.addEventListener("online", handleOnline);
-
-/*
- function init() 는 어플케이션을 초기화한다.
- What changes the color is the event listener.
-The only thing init() does it setting the BASE_COLOR
-
-javaScript 는 rgb 색상을 더 선호한다.
+/* !== 는 같지않는  == 같은
+6번줄에 value 값을 주고 그 className을 가져와서 8번 줄에 그것을 세팅한다.
+같지않으면 className 을 준다.
 */
 
-// flatuicolors.com
-
-/* JavaScript DOM event MDN 은 다양한 이벤트를 볼수 있다.
- */
+function init() {
+  title.addEventListener("click", handleClick);
+}
+init();
